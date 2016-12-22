@@ -27,19 +27,17 @@ var APP_ID = undefined; //OPTIONAL: replace with "amzn1.echo-sdk-ams.app.[your-u
  * Array containing space facts.
  */
 var FACTS = [
-    "A year on Mercury is just 88 days long.",
-    "Despite being farther from the Sun, Venus experiences higher temperatures than Mercury.",
-    "Venus rotates counter-clockwise, possibly because of a collision in the past with an asteroid.",
-    "On Mars, the Sun appears about half the size as it does on Earth.",
-    "Earth is the only planet not named after a god.",
-    "Jupiter has the shortest day of all the planets.",
-    "The Milky Way galaxy will collide with the Andromeda Galaxy in about 5 billion years.",
-    "The Sun contains 99.86% of the mass in the Solar System.",
-    "The Sun is an almost perfect sphere.",
-    "A total solar eclipse can happen once every 1 to 2 years. This makes them a rare event.",
-    "Saturn radiates two and a half times more energy into space than it receives from the sun.",
-    "The temperature inside the Sun can reach 15 million degrees Celsius.",
-    "The Moon is moving approximately 3.8 cm away from our planet every year."
+    "Banging your head against a wall burns 150 calories an hour."
+    "n the UK, it is illegal to eat mince pies on Christmas Day!",
+    "Pteronophobia is the fear of being tickled by feathers!",
+    "When hippos are upset, their sweat turns red.",
+    "A flock of crows is known as a murder.",
+    "The average woman uses her height in lipstick every 5 years.",
+    "Cherophobia is the fear of fun.",
+    "During your lifetime, you will produce enough saliva to fill two swimming pools.",
+    "If Pinokio says “My Noes Will Grow Now”, it would cause a paradox.",
+    "King Henry VIII slept with a gigantic axe beside him.",
+    "Bikinis and tampons invented by men.",
 ];
 
 /**
@@ -85,7 +83,7 @@ Fact.prototype.intentHandlers = {
     },
 
     "AMAZON.HelpIntent": function (intent, session, response) {
-        response.ask("You can say tell me a space fact, or, you can say exit... What can I help you with?", "What can I help you with?");
+        response.ask("You can say tell me a fun fact, or, you can say exit... What can I help you with?", "What can I help you with?");
     },
 
     "AMAZON.StopIntent": function (intent, session, response) {
@@ -119,4 +117,3 @@ exports.handler = function (event, context) {
     var fact = new Fact();
     fact.execute(event, context);
 };
-
